@@ -1,0 +1,60 @@
+DECLARE
+  item_name VARCHAR2(100) := 'The Shawshank Redemption';
+  creator VARCHAR2(100) := 'Frank Darabont';
+  quantity NUMBER := 1;
+  genre VARCHAR2(50) := 'Drama';
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('Item Name: ' || item_name);
+  DBMS_OUTPUT.PUT_LINE('Creator: ' || creator);
+  DBMS_OUTPUT.PUT_LINE('Quantity: ' || quantity);
+  DBMS_OUTPUT.PUT_LINE('Genre: ' || genre);
+END;
+/
+DECLARE
+  points_per_week NUMBER := 150;
+  weeks NUMBER := 8;
+  total_points NUMBER;
+BEGIN
+  total_points := points_per_week * weeks;
+  DBMS_OUTPUT.PUT_LINE('After ' || weeks || ' weeks, you have earned a total of ' || total_points || ' points.');
+END;
+/
+DECLARE
+  score NUMBER := 750; -- Example score
+  prize_threshold NUMBER := 800;
+BEGIN
+  IF score >= prize_threshold THEN
+    DBMS_OUTPUT.PUT_LINE('Congratulations! You won a prize!');
+  ELSE
+    DBMS_OUTPUT.PUT_LINE('You did not meet the score requirement for a prize.  Keep trying!');
+  END IF;
+END;
+/
+CREATE TABLE books (
+  book_id NUMBER PRIMARY KEY,
+  title VARCHAR2(100),
+  author VARCHAR2(100),
+  publication_year NUMBER,
+  genre VARCHAR2(50)
+);
+INSERT INTO books (book_id, title, author, publication_year, genre) VALUES (1, 'The Lord of the Rings', 'J.R.R. Tolkien', 1954, 'Fantasy');
+INSERT INTO books (book_id, title, author, publication_year, genre) VALUES (2, 'Pride and Prejudice', 'Jane Austen', 1813, 'Romance');
+INSERT INTO books (book_id, title, author, publication_year, genre) VALUES (3, '1984', 'George Orwell', 1949, 'Dystopian');
+INSERT INTO books (book_id, title, author, publication_year, genre) VALUES (4, 'To Kill a Mockingbird', 'Harper Lee', 1960, 'Historical Fiction');
+CREATE TABLE video_game_players (
+  player_id NUMBER PRIMARY KEY,
+  player_name VARCHAR2(50),
+  favorite_video_game VARCHAR2(50)
+);
+
+CREATE TABLE board_game_players (
+  player_id NUMBER PRIMARY KEY,
+  player_name VARCHAR2(50),
+  favorite_board_game VARCHAR2(50)
+);
+INSERT INTO video_game_players VALUES (1, 'Alice', 'Zelda');
+INSERT INTO video_game_players VALUES (2, 'Bob', 'Mario');
+INSERT INTO video_game_players VALUES (3, 'Charlie', 'Pokemon');
+INSERT INTO board_game_players VALUES (1, 'Alice', 'Monopoly');
+INSERT INTO board_game_players VALUES (4, 'David', 'Chess');
+INSERT INTO board_game_players VALUES (3, 'Charlie', 'Scrabble');
