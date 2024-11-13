@@ -1,0 +1,20 @@
+CREATE TABLE Books (
+    book_id NUMBER PRIMARY KEY,
+    title VARCHAR2(100),
+    year_published NUMBER);
+
+CREATE TABLE Books_Authors ( 
+    book_author_id NUMBER PRIMARY KEY,
+    book_id NUMBER,
+    author_id NUMBER);
+
+ALTER TABLE  Books_Authors
+ADD  Books_Authors_sex VARCHAR2(30);
+
+Reflection:Unique Constraints, ensure that each value in a specified column is unique across all rows.
+ This prevents duplicate entries, which can lead to data inconsistencies and errors.
+ For example, the book_id and book_author_id columns in your Books and Books_Authors tables,
+ respectively, have unique constraints, ensuring that each book and author entry is distinct and identifiable.
+
+
+
