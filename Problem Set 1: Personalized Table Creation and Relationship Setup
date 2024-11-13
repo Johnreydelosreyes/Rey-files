@@ -1,0 +1,36 @@
+CREATE TABLE books (
+    book_id NUMBER PRIMARY KEY,
+    title_books VARCHAR2(50),
+    year_released NUMBER);
+
+
+
+CREATE TABLE authors (
+    authors_id NUMBER PRIMARY KEY,
+    authors_name VARCHAR2(50),
+    books_id NUMBER);
+
+
+INSERT INTO books(books_id, title_books, year_released)
+VALUES(1, 'alamat ng gagamboy', 2021);
+
+INSERT INTO books(books_id, title_books, year_released)
+VALUES(2, 'pinokyo', 2003);
+
+INSERT INTO books(books_id, title_books, year_released)
+VALUES(3, 'harry potter', 2012);
+
+
+
+
+
+INSERT INTO authors(authors_id, authors_name, books_id) 
+VALUES(1, 'JUSWA', 1)
+
+INSERT INTO authors(authors_id, authors_name, books_id) 
+VALUES(2, 'JUSTIN', 2)
+
+INSERT INTO authors(authors_id, authors_name, books_id) 
+VALUES(3, 'LAYCA', 3)
+Reflection: Foreign keys and unique constraints are essential tools in relational databases to maintain data accuracy and integrity.
+
