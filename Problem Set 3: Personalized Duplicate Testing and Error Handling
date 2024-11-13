@@ -1,0 +1,9 @@
+INSERT INTO books(books_id, title_books, year_released)
+VALUES(2, 'pinokyo', 2003);
+ORA-00001: unique constraint (SQL_VRWQNSUVAJJGHSLPNEOPPGVBS.SYS_C00172996532) violated ORA-06512: at "SYS.DBMS_SQL", line 1721
+
+Reflection:The error message you're seeing, ORA-00001: unique constraint violated, 
+indicates that you're trying to insert a duplicate value into a column that has a unique constraint. 
+In your case, it seems the books_id column has a unique constraint, 
+meaning each value in this column must be unique across all rows in the books table.
+
