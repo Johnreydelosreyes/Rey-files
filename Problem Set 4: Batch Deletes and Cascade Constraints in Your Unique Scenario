@@ -1,0 +1,7 @@
+DELETE FROM books
+WHERE books_id = 1;
+
+DROP TABLE books
+CASCADE CONSTRAINTS;
+Reflection: In scenarios where tables are linked by foreign keys, such as your books and authors tables, 
+the CASCADE CONSTRAINTS clause ensures that.
