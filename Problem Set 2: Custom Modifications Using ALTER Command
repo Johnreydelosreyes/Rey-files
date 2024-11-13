@@ -1,0 +1,10 @@
+ALTER TABLE books
+ADD books_store VARCHAR2(30);
+
+ALTER TABLE authors
+ADD authors_sex VARCHAR2(30);
+
+ALTER TABLE books
+ADD CONSTRAINT unique_title_books
+UNIQUE (title_books);
+Reflection:The unique constraint on the books_id column plays a crucial role in maintaining the integrity of your database.
